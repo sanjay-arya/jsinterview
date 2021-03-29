@@ -2,13 +2,13 @@
 
 ## Brief
 
-Hey there! Thank you for taking the time to work on this exercise as part of the interview process. Relax and enjoy this exercise. When you do, you will be at your best. Have a cup of coffee and come back here if you need.
+Hey there! Thank you for taking the time to work on this exercise as part of the interview process. Relax and enjoy this exercise. When you do, you will be at your best. If you are not in your best condition right now, have a coffee, then come back for this.
 
 To assure you, not completing this exercise doesn’t mean you are not a good fit for us. Being part of a team takes more than just competence. Character, chemistry, and culture fit are equally important to us.
 
 Without further ado, let’s jump into the fun part!
 
-To give you an overview, you are to work on these tasks:
+To give you an overview, you will be working on these tasks:
 
 1. Create a backend with a set of RESTful API. (Node.js, Express, Sequelize with sqlite)
 2. Create a frontend that consumes it. (React)
@@ -30,16 +30,34 @@ Complete the respective tasks based on the role you are applying for.
 
 Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Clone this repository.
 
-| Path     | Method | Description                                                                                                                                                                                                    |
-| -------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                                                                             |
-| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a'. Returns the number of records persisted into the database. |
+| Path     | Method | Description                                                                                                                                                                                                                              |
+| -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                                                                                                       |
+| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a'. Finally, pass all the records persisted into the database through the response body. |
 
 ---
 
 ## Task 2 - Create React Frontend
 
 Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that consumes endpoint _POST /process_ upon click.
+
+_POST /process_ endpoint would return an array of objects that look something like this:
+
+```json
+[
+    {
+        "id":1,
+        "randAlphabet":"a"
+    },
+    {
+        "id":304,
+        "randAlphabet":"d"
+    },
+    ...
+]
+```
+
+These data look boring. Could you list them on screen and figure out some ways to beautify them?
 
 ---
 
@@ -52,5 +70,3 @@ Once you are done with the tasks, push them to a personal GIT repository (not th
 ## Task 4 - Create CICD Pipeline
 
 Choose a CICD platform of your choice and create CICD pipeline with the GIT repository. Share the admin rights to the CICD platform with your interviewer.
-
----
