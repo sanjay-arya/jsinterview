@@ -1,0 +1,56 @@
+# Interview Exercise
+
+## Brief
+
+Hey there! Thank you for taking the time to work on this exercise as part of the interview process. Relax and enjoy this exercise. When you do, you will be at your best. Have a cup of coffee and come back here if you need.
+
+To assure you, not completing this exercise doesn’t mean you are not a good fit for us. Being part of a team takes more than just competence. Character, chemistry, and culture fit are equally important to us.
+
+Without further ado, let’s jump into the fun part!
+
+To give you an overview, you are to work on these tasks:
+
+1. Create a backend with a set of RESTful API. (Node.js, Express, Sequelize with sqlite)
+2. Create a frontend that consumes it. (React)
+3. Push it to a public GIT repository.
+4. Setup CICD.
+
+Complete the respective tasks based on the role you are applying for.
+
+| Role                 | Requirements                                                                                                                       |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend Developer   | The interviewer should have shared information on backend APIs with you. <br>You should complete (2) and (3). <br>(4) is optional. |
+| Backend Developer    | You should complete (1) and (3). <br> (4) is optional.                                                                             |
+| Full Stack Developer | You should complete (1), (2) and (3).<br>(4) is optional.                                                                          |
+| DevOps Engineer      | The interviewer should have shared a git repository to implement (4).                                                              |
+
+---
+
+## Task 1 - Create RESTful APIs
+
+Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Clone this repository.
+
+| Path     | Method | Description                                                                                                                                                                                                    |
+| -------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                                                                             |
+| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a'. Returns the number of records persisted into the database. |
+
+---
+
+## Task 2 - Create React Frontend
+
+Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that consumes endpoint _POST /process_ upon click.
+
+---
+
+## Task 3 - Push to a GIT Repository
+
+Once you are done with the tasks, push them to a personal GIT repository (not the one you cloned from) and squash it. Share the repository with the interviewer.
+
+---
+
+## Task 4 - Create CICD Pipeline
+
+Choose a CICD platform of your choice and create CICD pipeline with the GIT repository. Share the admin rights to the CICD platform with your interviewer.
+
+---
