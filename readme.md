@@ -58,7 +58,7 @@ _GET /fetch_ endpoint would return an array of objects that look like this:
 ]
 ```
 
-For every object in the array received in the response body, render a square element with the value of property `randAlphabet` displayed in it using a grid layout.
+For every object in the array received in the response body, render a square element with the value of property `randAlphabet` displayed in it using a grid layout on the home screen.
 
 ---
 
