@@ -15,7 +15,7 @@ To give you an overview, you will be working on these tasks:
 3. Push it to a public GIT repository.
 4. Setup CICD.
 
-Complete the respective tasks based on the role you are applying for. Before you start, please fork the repository.
+Complete the respective tasks based on the role you are applying for.
 
 | Role                 | Requirements                                                                                                                       |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,19 +28,19 @@ Complete the respective tasks based on the role you are applying for. Before you
 
 ## Task 1 - Create RESTful APIs
 
-Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Clone this repository.
+Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Please fork this repository and work on it.
 
 | Path     | Method | Description                                                                                                                                                 |
 | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                          |
-| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a' and 'b'. |
-| /fetch   | GET    | Fetch the persisted data and return them as HTTP Response Body.                                                                                             |
+| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a' and 'b'. This endpoint verify JWT Token in the HTTP Header 'Authoriszation Bearer <JWT Token>'. |
+| /fetch   | GET    | Fetch the persisted data and return them as HTTP Response Body. This endpoint verify JWT Token in the HTTP Header 'Authorization Bearer <JWT Token>'.                                                                                            |
 
 ---
 
 ## Task 2 - Create React Frontend
 
-Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that consumes endpoint _POST /process_ upon click.
+Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that calls endpoint _POST /process_ to start processing some data in the backend upon click. Then, another button that calls endpoint _GET /fetch_ to retrieve the processed data. 
 
 _GET /fetch_ endpoint would return an array of objects that look like this:
 
