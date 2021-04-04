@@ -30,10 +30,11 @@ Complete the respective tasks based on the role you are applying for.
 
 Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Clone this repository.
 
-| Path     | Method | Description                                                                                                                                                                                                                              |
-| -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                                                                                                       |
-| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a'. Finally, pass all the records persisted into the database through the response body. |
+| Path     | Method | Description                                                                                                                                                 |
+| -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                          |
+| /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a' and 'b'. |
+| /fetch   | GET    | Fetch the persisted data and return them as HTTP Response Body.                                                                                             |
 
 ---
 
@@ -41,7 +42,7 @@ Using Node.js, express and sequelize (sqlite), accomplish the following HTTP con
 
 Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that consumes endpoint _POST /process_ upon click.
 
-_POST /process_ endpoint would return an array of objects that look something like this:
+_GET /fetch_ endpoint would return an array of objects that look like this:
 
 ```json
 [
@@ -51,13 +52,13 @@ _POST /process_ endpoint would return an array of objects that look something li
     },
     {
         "id":304,
-        "randAlphabet":"d"
+        "randAlphabet":"b"
     },
     ...
 ]
 ```
 
-These data look boring. Could you list them on screen and figure out some ways to beautify them?
+For every object, render a square element with the value of property `randAlphabet` displayed in it using a grid layout.
 
 ---
 
