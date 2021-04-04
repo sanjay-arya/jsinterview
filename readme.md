@@ -15,7 +15,7 @@ To give you an overview, you will be working on these tasks:
 3. Push it to a public GIT repository.
 4. Setup CICD.
 
-Complete the respective tasks based on the role you are applying for.
+Complete the respective tasks based on the role you are applying for. Before you start, please fork the repository.
 
 | Role                 | Requirements                                                                                                                       |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
